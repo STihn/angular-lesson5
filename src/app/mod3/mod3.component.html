@@ -1,0 +1,31 @@
+<p>mod3 works!</p>
+<form [formGroup]="formreacitve2">
+  <label>
+    name
+    <input type="text" formControlName="name" placeholder="name" />
+  </label>
+  <br>
+  <label
+    >age
+    <input type="number" formControlName="age" placeholder="age" />
+  </label>
+  <br>
+  <label>email
+    <input type="email" formControlName="email" placeholder="email" />
+  </label>
+  <br>
+  <label>date
+    <input type="date" formControlName="date" placeholder="date" />
+  </label>
+  <br>
+  <div formArrayName="phones">
+    <input
+      *ngFor="let phone of phones.controls; let i = index"
+      [formControlName]="i"
+    />
+  </div>
+</form>
+<pre>{{ formreacitve2.value | json }}</pre>
+
+
+<!-- {{date|date: 'dd.MM.yyyy HH:mm:ss'}} -->

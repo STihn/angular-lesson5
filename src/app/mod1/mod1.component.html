@@ -1,0 +1,15 @@
+<p>mod1 works!</p>
+{{name2 | uppercase}}
+
+<input [value]="name2" />
+<input  value="55" (click)="onClick($event)"/>
+<input [(ngModel)]="age"/>
+<p>{{age | number:'1.1-1'}}</p>
+<form [formGroup]="formreacitve">
+ <input formControlName="name">
+ <input  formControlName="lastName">
+ <input formControlName="age">
+</form>
+<code>{{formreacitve.value | json}}</code>
+<pre>{{formreacitve.value | json}}</pre>
+<p>{{formreacitve.value | json}}</p>
